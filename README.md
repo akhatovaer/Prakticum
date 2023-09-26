@@ -1,0 +1,2 @@
+# Prakticum
+pyton_project_for_Yandex_Prakticum
