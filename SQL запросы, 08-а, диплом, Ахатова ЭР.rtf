@@ -19,7 +19,7 @@ GROUP BY Couriers.login;\cf5 \cb3 \
 \
 \
 \cf3 \cb4 SELECT\
-    tracker_number AS OrderTracker,\
+    track AS OrderTrack,\
     CASE\
         WHEN finished = true THEN 2\
         WHEN cancelled = true THEN -1\

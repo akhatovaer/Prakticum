@@ -11,13 +11,10 @@ def post_new_order(body):
                         headers = data.headers)
 
 response_new_order = post_new_order(data.body);
-print(response_new_order.status_code)
-print(response_new_order.json())
 tracker = (response_new_order.json()["track"])
 
 #Функция получения заказа по номеру
 def get_order_by_track(tracker):
-    return requests.get(configuration.URL_SERVICE + configuration.GET_ORDER_BY_NUMBER_PATH + "?t=" + str(tracker), params = {"track" : tracker})
+    return requests.get(configuration.URL_SERVICE + configuration.GET_ORDER_BY_NUMBER_PATH + "?t=" + str(tracker))
 
 response_order_by_track = get_order_by_track(tracker);
-print(response_order_by_track.json())
